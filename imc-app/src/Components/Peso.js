@@ -1,27 +1,12 @@
 import React, {Component} from 'react';
 
-class Peso extends Component{
-    
-    constructor(props){
-        super(props);
-        this.state = {value: ''}
-        console.log(this.state)
-        this.handleChange = this.handleChange.bind(this);
-      }
-    
-      handleChange(event) {
-        this.setState({value: event.target.value});
-        console.log(this.state.value)
-      }
-    render(){
-        return( 
+function Peso(props) {
+
+    return( 
         <div>
-            <input placeholder='Peso' value={this.state.value} onChange={this.handleChange}/>
+            <input placeholder='Peso'name={props.name}  value={props.peso} onChange={props.onChange}/>
         </div>
-        )
-
-    }
+    )
 }
-
 
 export default Peso;

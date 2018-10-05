@@ -1,22 +1,22 @@
-import React,{Component} from 'react';
+import React from 'react';
 
 
-class Altura extends Component{
-    state = {
-        value1:''
-    }
+function Altura (props){
+    console.log("props altura" );
+    
+    // state = {
+    //     value1:''
+    // }
 
-    handleChange = (event) => {
-        this.setState({value1: event.target.value});
-        console.log(this.state.value1)
-    };
-    render(){
+    // handleChange = (event) => {
+    //     this.setState({value1: event.target.value});
+    //     console.log(this.state.value1)
+    // };
         return( 
             <div>
-                <input placeholder='Altura' value1={this.state.value1} onChange={this.handleChange}></input>
+                <input placeholder='Altura' name={props.name} altura={props.altura} onChange={props.onChange}></input>
             </div>
         );
-    }
 }
 
 

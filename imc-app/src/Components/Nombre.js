@@ -7,7 +7,7 @@ function Nombre(props){
     
     return( 
     <div>
-        <input placeholder='Nombre' onChange={props.changeValue}></input>
+        <input placeholder='Nombre' name='nombre' nombre={props.nombre} onChange={props.onChange}></input>
     </div>
     )
 }
